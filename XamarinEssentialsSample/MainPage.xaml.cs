@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using Xamarin.Essentials;
 
 namespace XamarinEssentialsSample
 {
@@ -16,6 +17,16 @@ namespace XamarinEssentialsSample
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void OnClickCheckFolder(object sender, EventArgs e)
+        {
+            var essentialCacheDirectory = FileSystem.CacheDirectory;
+            var appDataDirectory = FileSystem.AppDataDirectory;
+
+            string BR= Environment.NewLine;
+            lblFolder.Text = $"FileSystem.CacheDirectory:{BR}{essentialCacheDirectory}{BR}{BR}"
+                + $"FileSystem.AppDataDirectory:{BR}{appDataDirectory}{BR}{BR}";
         }
     }
 }

@@ -6,9 +6,11 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     x:Class="XamarinEssentialsSample.MainPage">
-    <StackLayout>
+
+    <StackLayout VerticalOptions="Center">
+        <Button Clicked="OnClickCheckFolder" Text="Check Essentials Folder" />
         <!-- Place new controls here -->
-        <Label
+        <Label x:Name="lblFolder"
             Text="Welcome to Xamarin.Forms!"
             HorizontalOptions="Center"
             VerticalOptions="CenterAndExpand" />
