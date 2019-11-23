@@ -23,10 +23,12 @@ namespace XamarinEssentialsSample
         {
             var essentialCacheDirectory = FileSystem.CacheDirectory;
             var appDataDirectory = FileSystem.AppDataDirectory;
+            var pclLocalStorage = PCLStorage.FileSystem.Current.LocalStorage.Path;
 
             string BR= Environment.NewLine;
             lblFolder.Text = $"FileSystem.CacheDirectory:{BR}{essentialCacheDirectory}{BR}{BR}"
-                + $"FileSystem.AppDataDirectory:{BR}{appDataDirectory}{BR}{BR}";
+                + $"FileSystem.AppDataDirectory:{BR}{appDataDirectory}{BR}{BR}"
+                + $"PCLStorage.LocalStorage:{BR}{pclLocalStorage}";
         }
     }
 }
